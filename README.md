@@ -10,7 +10,7 @@
 
 ## What is this all about?
 
-Offers a single method to generate random probability distributions. Several methods are available. The implementation is based on Rcpp.
+Offers a single method to generate random probability distributions. Several methods are available. The implementation of most methods is based on Rcpp for performance reasons.
 
 ## Installation Instructions
 
@@ -18,6 +18,18 @@ The package will be available at [CRAN](http://cran.r-project.org) when it is do
 
 ```r
 devtools::install_github("jakobbossek/rpv")
+```
+
+## Example
+
+Assume we aim to generate `n=250` vectors in `d=3` dimensions where the components of each vector follow the same distribution. This can be achieved, e.g., by the following command:
+
+```{r}
+library(rpv)
+library(scatterplot3d)
+x = rpv(n = 250, d = 3, method = "exponential")
+scatterplot3d(x[,1:3], angle = 120, pch = 4, color = "blue", cex.symbols = 0.7,
+, xlab = expression(x[1]), ylab = expression(x[2]), zlab = expression(x[3]))
 ```
 
 ## Contact
