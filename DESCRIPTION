@@ -1,6 +1,6 @@
 Package: rpv
 Title: Random Probability Vectors
-Description: Methods to generate random probability vectors.
+Description: Methods to generate pseudo-random probability vectors.
 Version: 1.0.0
 Authors@R: person("Jakob", "Bossek", email = "j.bossek@gmail.com", role = c("aut", "cre"))
 Depends:

@@ -12,7 +12,8 @@
 #'   Number of components of each vector (at least 2).
 #' @param method [\code{character(1)}]\cr
 #'   One of \dQuote{norm} (normalization method), \dQuote{trigonometric},
-#'   \dQuote{simplex} (sample from a unit simplex) or \dQuote{iterative}.
+#'   \dQuote{simplex} (sample from a unit simplex), \dQuote{exponential}
+#'   or \dQuote{iterative}.
 #'   Default is \code{simplex}.
 #' @param shuffle [\code{logical(1)}]\cr
 #'   Should the values of each vector be permutatet randomly?
@@ -25,9 +26,9 @@
 #'   Default is \code{FALSE}.
 #' @return [\code{matrix(n, d)}] \eqn{(n \times d)} matrix even if \eqn{n=1}.
 #' @examples
-#' R = rrpv(10, 2)
-#' R = rrpv(10, 5, method ="iterative")
-#' R = rrpv(10, 3, method = "trigonometric", shuffle = TRUE, as.df = TRUE)
+#' R = rpv(10, 2)
+#' R = rpv(10, 5, method ="iterative")
+#' R = rpv(10, 3, method = "trigonometric", shuffle = TRUE, as.df = TRUE)
 #' \dontrun{
 #' opar = par(mfrow = c(1, 3))
 #' plot.ecdf(R$X1)
@@ -36,16 +37,16 @@
 #' par(opar)
 #' }
 #' @export
-rrpv = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) {
+rpv = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) {
   n = checkmate::asInt(n, lower = 1L)
   d = checkmate::asInt(d, lower = 2L)
-  checkmate::assert_choice(method, choices = c("normalization", "trigonometric", "simplex", "iterative"))
+  checkmate::assert_choice(method, choices = c("normalization", "trigonometric", "simplex", "iterative", "exponential"))
   checkmate::assert_flag(shuffle)
   checkmate::assert_flag(as.df)
 
-  # construct name of C-method: rrpv_<method>_C
-  fun = match.fun(paste0("rrpv_", method, "_C"))
-  rpvs = fun(n, d)
+  # construct name of C-method: rpv_<method>
+  fun = paste0("rpv_", method)
+  rpvs = do.call(fun, list(n, d))
 
   #FIXME: this is ugly. Could we modify the C generation code?
   if (shuffle) {
@@ -61,3 +62,9 @@ rrpv = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) 
 
   return(rpvs)
 }
+
+rpv_exponential = function(n, d) {
+  res = matrix(rexp(n * d), ncol = d, nrow = n)
+  res / rowSums(res)
+}
+

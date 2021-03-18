@@ -5,60 +5,60 @@
 
 using namespace Rcpp;
 
-// rrpv_normalization_C
-NumericMatrix rrpv_normalization_C(int n, int d);
-RcppExport SEXP _rpv_rrpv_normalization_C(SEXP nSEXP, SEXP dSEXP) {
+// rpv_normalization
+NumericMatrix rpv_normalization(int n, int d);
+RcppExport SEXP _rpv_rpv_normalization(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(rrpv_normalization_C(n, d));
+    rcpp_result_gen = Rcpp::wrap(rpv_normalization(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// rrpv_iterative_C
-NumericMatrix rrpv_iterative_C(int n, int d);
-RcppExport SEXP _rpv_rrpv_iterative_C(SEXP nSEXP, SEXP dSEXP) {
+// rpv_iterative
+NumericMatrix rpv_iterative(int n, int d);
+RcppExport SEXP _rpv_rpv_iterative(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(rrpv_iterative_C(n, d));
+    rcpp_result_gen = Rcpp::wrap(rpv_iterative(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// rrpv_simplex_C
-NumericMatrix rrpv_simplex_C(int n, int d);
-RcppExport SEXP _rpv_rrpv_simplex_C(SEXP nSEXP, SEXP dSEXP) {
+// rpv_simplex
+NumericMatrix rpv_simplex(int n, int d);
+RcppExport SEXP _rpv_rpv_simplex(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(rrpv_simplex_C(n, d));
+    rcpp_result_gen = Rcpp::wrap(rpv_simplex(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// rrpv_trigonometric_C
-NumericMatrix rrpv_trigonometric_C(int n, int d);
-RcppExport SEXP _rpv_rrpv_trigonometric_C(SEXP nSEXP, SEXP dSEXP) {
+// rpv_trigonometric
+NumericMatrix rpv_trigonometric(int n, int d);
+RcppExport SEXP _rpv_rpv_trigonometric(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(rrpv_trigonometric_C(n, d));
+    rcpp_result_gen = Rcpp::wrap(rpv_trigonometric(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_rpv_rrpv_normalization_C", (DL_FUNC) &_rpv_rrpv_normalization_C, 2},
-    {"_rpv_rrpv_iterative_C", (DL_FUNC) &_rpv_rrpv_iterative_C, 2},
-    {"_rpv_rrpv_simplex_C", (DL_FUNC) &_rpv_rrpv_simplex_C, 2},
-    {"_rpv_rrpv_trigonometric_C", (DL_FUNC) &_rpv_rrpv_trigonometric_C, 2},
+    {"_rpv_rpv_normalization", (DL_FUNC) &_rpv_rpv_normalization, 2},
+    {"_rpv_rpv_iterative", (DL_FUNC) &_rpv_rpv_iterative, 2},
+    {"_rpv_rpv_simplex", (DL_FUNC) &_rpv_rpv_simplex, 2},
+    {"_rpv_rpv_trigonometric", (DL_FUNC) &_rpv_rpv_trigonometric, 2},
     {NULL, NULL, 0}
 };
 
