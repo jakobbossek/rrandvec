@@ -37,8 +37,15 @@ Default is \code{FALSE}.}
 Generate an \eqn{n \times d} matrix. Each row vector is a
 probability vector \eqn{(p_1, \ldots, p_d)} with \eqn{\sum_{i=1}^{d} p_i = 1}.
 The function offers several methods to generate the rows in a way that the
-components are unbiased which means that they are required to have similar
-probability distributions.
+components are unbiased which means that they are required to have similar /
+the same probability distributions.
+
+[1] Maziero, J. Generating Pseudo-Random Discrete Probability Distributions.
+Brazilian Journal of Physics 45, 377–382 (2015).
+https://doi.org/10.1007/s13538-015-0337-8
+
+[2] Grimme, C. Picking a Uniformly Random Point from an Arbitrary Simplex.
+Technical Report. https://doi.org/10.13140/RG.2.1.3807.6968
 }
 \examples{
 R = rpv(10, 2)

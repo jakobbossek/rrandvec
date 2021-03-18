@@ -6,7 +6,6 @@
 [![Build Status](https://travis-ci.org/jakobbossek/rpv.svg?branch=master)](https://travis-ci.org/jakobbossek/rpv)
 [![Build status](https://ci.appveyor.com/api/projects/status/eu0nns2dsgocwntw/branch/master?svg=true)](https://ci.appveyor.com/project/jakobbossek/rpv/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/jakobbossek/rpv/badge.svg?branch=master)](https://coveralls.io/github/jakobbossek/rpv?branch=master)
-[![Research software impact](http://depsy.org/api/package/cran/rpv/badge.svg)](http://depsy.org/package/r/rpv)
 
 ## What is this all about?
 
