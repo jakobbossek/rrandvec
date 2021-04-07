@@ -17,3 +17,7 @@ rpv_trigonometric <- function(n, d) {
     .Call('_rpv_rpv_trigonometric', PACKAGE = 'rpv', n, d)
 }
 
+rpv_exponential <- function(n, d) {
+    .Call('_rpv_rpv_exponential', PACKAGE = 'rpv', n, d)
+}
+

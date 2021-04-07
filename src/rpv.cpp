@@ -87,3 +87,23 @@ NumericMatrix rpv_trigonometric(int n, int d) {
 
   return R;
 }
+
+// [[Rcpp::export]]
+NumericMatrix rpv_exponential(int n, int d) {
+  NumericMatrix R(n, d);
+
+  double u, s;
+  for (int i = 0; i < n; ++i) {
+    s = 0;
+    for (int j = 0; j < d; ++j) {
+      u = ((double) rand() / (RAND_MAX));
+      R(i, j) = (-1) * log(1 - u);
+      s += R(i, j);
+    }
+    for (int j = 0; j < d; ++j) {
+      R(i, j) = R(i, j) / s;
+    }
+  }
+
+  return R;
+}

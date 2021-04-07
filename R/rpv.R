@@ -69,9 +69,3 @@ rpv = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) {
 
   return(rpvs)
 }
-
-rpv_exponential = function(n, d) {
-  res = matrix(rexp(n * d), ncol = d, nrow = n)
-  res / rowSums(res)
-}
-
