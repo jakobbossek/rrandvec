@@ -96,7 +96,7 @@ NumericMatrix rpv_exponential(int n, int d) {
   for (int i = 0; i < n; ++i) {
     s = 0;
     for (int j = 0; j < d; ++j) {
-      u = ((double) rand() / (RAND_MAX));
+      u = as<double>(runif(1)); // ((double) rand() / (RAND_MAX));
       R(i, j) = (-1) * log(1 - u);
       s += R(i, j);
     }
