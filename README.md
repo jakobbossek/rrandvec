@@ -23,7 +23,7 @@ devtools::install_github("jakobbossek/rpv")
 
 Assume we aim to generate `n=250` vectors in `d=3` dimensions where the components of each vector follow the same distribution. This can be achieved, e.g., by the following command:
 
-```{r}
+```r
 library(rpv)
 library(scatterplot3d)
 x = rpv(n = 250, d = 3, method = "exponential")
