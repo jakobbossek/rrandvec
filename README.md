@@ -27,8 +27,7 @@ Assume we aim to generate `n=250` vectors in `d=3` dimensions where the componen
 library(rpv)
 library(scatterplot3d)
 x = rpv(n = 250, d = 3, method = "exponential")
-scatterplot3d(x[,1:3], angle = 120, pch = 4, color = "blue", cex.symbols = 0.7,
-, xlab = expression(x[1]), ylab = expression(x[2]), zlab = expression(x[3]))
+scatterplot3d(x[, 1:3], angle = 120, pch = 4, color = "blue", cex.symbols = 0.7, xlab = expression(x[1]), ylab = expression(x[2]), zlab = expression(x[3]))
 ```
 
 ## Contact
