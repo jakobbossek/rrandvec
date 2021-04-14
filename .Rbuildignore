@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 .travis.yml
 appveyor.yml
+test\.R
+images
+README\.md
