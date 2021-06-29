@@ -12,8 +12,8 @@ Badge](http://www.r-pkg.org/badges/version/rpv)](http://cran.r-project.org/web/p
 Downloads](http://cranlogs.r-pkg.org/badges/rpv)](http://cran.rstudio.com/web/packages/rpv/index.html)
 [![CRAN
 Downloads](http://cranlogs.r-pkg.org/badges/grand-total/rpv?color=orange)](http://cran.rstudio.com/web/packages/rpv/index.html)
-[![Coverage
-Status](https://coveralls.io/repos/github/jakobbossek/rpv/badge.svg?branch=master)](https://coveralls.io/github/jakobbossek/rpv?branch=master)
+[![Codecov test
+coverage](https://codecov.io/gh/jakobbossek/rpv/branch/main/graph/badge.svg)](https://codecov.io/gh/jakobbossek/rpv?branch=main)
 <!-- badges: end -->
 
 ## What is this all about?
