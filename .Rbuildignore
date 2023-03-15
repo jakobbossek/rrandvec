@@ -10,3 +10,6 @@ README\.md
 ^pkgdown$
 ^\.github$
 ^codecov\.yml$
+README.html
+README.Rmd
+playground.R
