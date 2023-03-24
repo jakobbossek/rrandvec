@@ -1,6 +1,6 @@
-Package: rpv
-Title: Random Probability Vectors
-Description: Methods to generate pseudo-random probability vectors.
+Package: randvec
+Title: Random vectors
+Description: Methods to generate pseudo-random vectors whose components sum up to one.
 Version: 1.0.0
 Authors@R: c(
     person(given = "Jakob",
@@ -14,13 +14,12 @@ Imports:
   Rcpp,
   checkmate
 Suggests:
-    covr,
-    testthat
+  covr,
+  testthat
 License: BSD_2_clause + file LICENSE
-URL: https://jakobbossek.github.io/rpv/, https://github.com/jakobbossek/rpv
-BugReports: https://github.com/jakobbossek/rpv/issues
+URL: https://jakobbossek.github.io/randvec/, https://github.com/jakobbossek/randvec
+BugReports: https://github.com/jakobbossek/randvec/issues
 Encoding: UTF-8
-LazyData: true
 ByteCompile: true
 RoxygenNote: 7.1.1
 LinkingTo: Rcpp

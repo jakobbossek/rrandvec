@@ -1,6 +1,6 @@
 #' @import checkmate
 #' @import Rcpp
-#' @useDynLib rpv
 #' @importFrom stats rexp
+#' @useDynLib randvec
 # .registration=TRUE
 NULL
