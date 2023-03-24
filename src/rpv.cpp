@@ -2,7 +2,7 @@
 using namespace Rcpp;
 
 // [[Rcpp::export]]
-NumericMatrix randvec_normalization(int n, int d) {
+NumericMatrix rrandvec_normalization(int n, int d) {
   NumericMatrix R(n, d);
 
   for (int i = 0; i < n; ++i) {
@@ -18,7 +18,7 @@ NumericMatrix randvec_normalization(int n, int d) {
 }
 
 // [[Rcpp::export]]
-NumericMatrix randvec_iterative(int n, int d) {
+NumericMatrix rrandvec_iterative(int n, int d) {
   NumericMatrix R(n, d);
 
   for (int i = 0; i < n; ++i) {
@@ -34,7 +34,7 @@ NumericMatrix randvec_iterative(int n, int d) {
 }
 
 // Sample a d-vector from the unit vector (see CGs technical report)
-NumericVector randvec_sample_vector_from_unit_simplex(int d) {
+NumericVector rrandvec_sample_vector_from_unit_simplex(int d) {
   NumericVector unifs = runif(d - 1);
   std::sort(unifs.begin(), unifs.end());
 
@@ -53,18 +53,18 @@ NumericVector randvec_sample_vector_from_unit_simplex(int d) {
 }
 
 // [[Rcpp::export]]
-NumericMatrix randvec_simplex(int n, int d) {
+NumericMatrix rrandvec_simplex(int n, int d) {
   NumericMatrix R(n, d);
 
   for (int i = 0; i < n; ++i) {
-    R(i, _) = randvec_sample_vector_from_unit_simplex(d);
+    R(i, _) = rrandvec_sample_vector_from_unit_simplex(d);
   }
 
   return R;
 }
 
 // [[Rcpp::export]]
-NumericMatrix randvec_trigonometric(int n, int d) {
+NumericMatrix rrandvec_trigonometric(int n, int d) {
   NumericMatrix R(n, d);
 
   for (int i = 0; i < n; ++i) {
@@ -89,7 +89,7 @@ NumericMatrix randvec_trigonometric(int n, int d) {
 }
 
 // [[Rcpp::export]]
-NumericMatrix randvec_exponential(int n, int d) {
+NumericMatrix rrandvec_exponential(int n, int d) {
   NumericMatrix R(n, d);
 
   double u, s;

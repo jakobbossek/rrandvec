@@ -10,77 +10,77 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// randvec_normalization
-NumericMatrix randvec_normalization(int n, int d);
-RcppExport SEXP _randvec_randvec_normalization(SEXP nSEXP, SEXP dSEXP) {
+// rrandvec_normalization
+NumericMatrix rrandvec_normalization(int n, int d);
+RcppExport SEXP _rrandvec_rrandvec_normalization(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(randvec_normalization(n, d));
+    rcpp_result_gen = Rcpp::wrap(rrandvec_normalization(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// randvec_iterative
-NumericMatrix randvec_iterative(int n, int d);
-RcppExport SEXP _randvec_randvec_iterative(SEXP nSEXP, SEXP dSEXP) {
+// rrandvec_iterative
+NumericMatrix rrandvec_iterative(int n, int d);
+RcppExport SEXP _rrandvec_rrandvec_iterative(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(randvec_iterative(n, d));
+    rcpp_result_gen = Rcpp::wrap(rrandvec_iterative(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// randvec_simplex
-NumericMatrix randvec_simplex(int n, int d);
-RcppExport SEXP _randvec_randvec_simplex(SEXP nSEXP, SEXP dSEXP) {
+// rrandvec_simplex
+NumericMatrix rrandvec_simplex(int n, int d);
+RcppExport SEXP _rrandvec_rrandvec_simplex(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(randvec_simplex(n, d));
+    rcpp_result_gen = Rcpp::wrap(rrandvec_simplex(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// randvec_trigonometric
-NumericMatrix randvec_trigonometric(int n, int d);
-RcppExport SEXP _randvec_randvec_trigonometric(SEXP nSEXP, SEXP dSEXP) {
+// rrandvec_trigonometric
+NumericMatrix rrandvec_trigonometric(int n, int d);
+RcppExport SEXP _rrandvec_rrandvec_trigonometric(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(randvec_trigonometric(n, d));
+    rcpp_result_gen = Rcpp::wrap(rrandvec_trigonometric(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
-// randvec_exponential
-NumericMatrix randvec_exponential(int n, int d);
-RcppExport SEXP _randvec_randvec_exponential(SEXP nSEXP, SEXP dSEXP) {
+// rrandvec_exponential
+NumericMatrix rrandvec_exponential(int n, int d);
+RcppExport SEXP _rrandvec_rrandvec_exponential(SEXP nSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type d(dSEXP);
-    rcpp_result_gen = Rcpp::wrap(randvec_exponential(n, d));
+    rcpp_result_gen = Rcpp::wrap(rrandvec_exponential(n, d));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_randvec_randvec_normalization", (DL_FUNC) &_randvec_randvec_normalization, 2},
-    {"_randvec_randvec_iterative", (DL_FUNC) &_randvec_randvec_iterative, 2},
-    {"_randvec_randvec_simplex", (DL_FUNC) &_randvec_randvec_simplex, 2},
-    {"_randvec_randvec_trigonometric", (DL_FUNC) &_randvec_randvec_trigonometric, 2},
-    {"_randvec_randvec_exponential", (DL_FUNC) &_randvec_randvec_exponential, 2},
+    {"_rrandvec_rrandvec_normalization", (DL_FUNC) &_rrandvec_rrandvec_normalization, 2},
+    {"_rrandvec_rrandvec_iterative", (DL_FUNC) &_rrandvec_rrandvec_iterative, 2},
+    {"_rrandvec_rrandvec_simplex", (DL_FUNC) &_rrandvec_rrandvec_simplex, 2},
+    {"_rrandvec_rrandvec_trigonometric", (DL_FUNC) &_rrandvec_rrandvec_trigonometric, 2},
+    {"_rrandvec_rrandvec_exponential", (DL_FUNC) &_rrandvec_rrandvec_exponential, 2},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_randvec(DllInfo *dll) {
+RcppExport void R_init_rrandvec(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

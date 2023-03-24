@@ -1,4 +1,4 @@
 library(testthat)
-library(randvec)
+library(rrandvec)
 
-test_check("randvec")
+test_check("rrandvec")

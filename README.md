@@ -1,19 +1,19 @@
 
-# randvec: Random Vectors that sum up to one
+# rrandvec: Random Vectors that sum up to one
 
-**Visit the [package website](https://jakobbossek.github.io/randvec/).**
+**Visit the [package website](https://jakobbossek.github.io/rrandvec/).**
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/jakobbossek/randvec/workflows/R-CMD-check/badge.svg)](https://github.com/jakobbossek/randvec/actions)
+[![R-CMD-check](https://github.com/jakobbossek/rrandvec/workflows/R-CMD-check/badge.svg)](https://github.com/jakobbossek/rrandvec/actions)
 [![CRAN Status
-Badge](http://www.r-pkg.org/badges/version/randvec)](https://CRAN.R-project.org/package=randvec)
+Badge](http://www.r-pkg.org/badges/version/rrandvec)](https://CRAN.R-project.org/package=rrandvec)
 [![CRAN
-Downloads](http://cranlogs.r-pkg.org/badges/randvec)](https://CRAN.R-project.org/package=randvec)
+Downloads](http://cranlogs.r-pkg.org/badges/rrandvec)](https://CRAN.R-project.org/package=rrandvec)
 [![CRAN
-Downloads](http://cranlogs.r-pkg.org/badges/grand-total/randvec?color=orange)](https://CRAN.R-project.org/package=randvec)
+Downloads](http://cranlogs.r-pkg.org/badges/grand-total/rrandvec?color=orange)](https://CRAN.R-project.org/package=rrandvec)
 [![Codecov test
-coverage](https://codecov.io/gh/jakobbossek/randvec/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jakobbossek/randvec?branch=main)
+coverage](https://codecov.io/gh/jakobbossek/rrandvec/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jakobbossek/rrandvec?branch=main)
 <!-- badges: end -->
 
 ## What is this all about?
@@ -30,7 +30,7 @@ install the dev-version ufrom github use the
 following command in R:
 
 ``` r
-devtools::install_github("jakobbossek/randvec")
+devtools::install_github("jakobbossek/rrandvec")
 ```
 
 ## Example
@@ -40,15 +40,15 @@ components of each vector follow the same distribution. This can be
 achieved, e.g., by the following command:
 
 ``` r
-library(randvec)
+library(rrandvec)
 library(scatterplot3d)
-x = randvec(n = 250, d = 3, method = "exponential")
+x = rrandvec(n = 250, d = 3, method = "exponential")
 scatterplot3d(x[, 1:3], angle = 120, pch = 4, color = "blue", cex.symbols = 0.7, xlab = expression(x[1]), ylab = expression(x[2]), zlab = expression(x[3]))
 ```
 
 ## Contact
 
 To report bugs or ask questions please use the [issue
-tracker](https://github.com/jakobbossek/randvec/issues). Pay attention
+tracker](https://github.com/jakobbossek/rrandvec/issues). Pay attention
 to explain the problem as good as possible. At its best you provide an
 example, so I can reproduce your problem quickly.

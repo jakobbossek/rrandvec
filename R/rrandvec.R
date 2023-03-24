@@ -1,4 +1,4 @@
-#' @title Generate pseudo-random discrete probability distributions.
+#' @title Generate random vectors that sum up to one.
 #'
 #' @description Generate an \eqn{n \times d} matrix. Each row vector is a
 #' probability vector \eqn{(p_1, \ldots, p_d)} with \eqn{\sum_{i=1}^{d} p_i = 1}.
@@ -33,9 +33,9 @@
 #'   Default is \code{FALSE}.
 #' @return [\code{matrix(n, d)}] \eqn{(n \times d)} matrix even if \eqn{n=1}.
 #' @examples
-#' R = randvec(10, 2)
-#' R = randvec(10, 5, method ="iterative")
-#' R = randvec(10, 3, method = "trigonometric", shuffle = TRUE, as.df = TRUE)
+#' R = rrandvec(10, 2)
+#' R = rrandvec(10, 5, method ="iterative")
+#' R = rrandvec(10, 3, method = "trigonometric", shuffle = TRUE, as.df = TRUE)
 #' \dontrun{
 #' opar = par(mfrow = c(1, 3))
 #' plot.ecdf(R$X1)
@@ -44,28 +44,28 @@
 #' par(opar)
 #' }
 #' @export
-randvec = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) {
+rrandvec = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) {
   n = checkmate::asInt(n, lower = 1L)
   d = checkmate::asInt(d, lower = 2L)
   checkmate::assert_choice(method, choices = c("normalization", "trigonometric", "simplex", "iterative", "exponential"))
   checkmate::assert_flag(shuffle)
   checkmate::assert_flag(as.df)
 
-  # construct name of C-method: randvec_<method>
-  fun = paste0("randvec_", method)
-  randvecs = do.call(fun, list(n, d))
+  # construct name of C-method: rrandvec_<method>
+  fun = paste0("rrandvec_", method)
+  rrandvecs = do.call(fun, list(n, d))
 
   #FIXME: this is ugly. Could we modify the C generation code?
   if (shuffle) {
-    randvecs = do.call(rbind, lapply(1:nrow(randvecs), function(i) {
-      sample(randvecs[i, ])
+    rrandvecs = do.call(rbind, lapply(1:nrow(rrandvecs), function(i) {
+      sample(rrandvecs[i, ])
     }))
   }
 
   if (as.df) {
-    randvecs = as.data.frame(randvecs, stringsAsFactors = FALSE)
-    colnames(randvecs) = paste0("X", 1:ncol(randvecs))
+    rrandvecs = as.data.frame(rrandvecs, stringsAsFactors = FALSE)
+    colnames(rrandvecs) = paste0("X", 1:ncol(rrandvecs))
   }
 
-  return(randvecs)
+  return(rrandvecs)
 }

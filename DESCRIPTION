@@ -1,4 +1,4 @@
-Package: randvec
+Package: rrandvec
 Title: Random vectors
 Description: Methods to generate pseudo-random vectors whose components sum up to one.
 Version: 1.0.0
@@ -17,9 +17,9 @@ Suggests:
   covr,
   testthat
 License: BSD_2_clause + file LICENSE
-URL: https://jakobbossek.github.io/randvec/, https://github.com/jakobbossek/randvec
-BugReports: https://github.com/jakobbossek/randvec/issues
+URL: https://jakobbossek.github.io/rrandvec/, https://github.com/jakobbossek/rrandvec
+BugReports: https://github.com/jakobbossek/rrandvec/issues
 Encoding: UTF-8
 ByteCompile: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 LinkingTo: Rcpp
