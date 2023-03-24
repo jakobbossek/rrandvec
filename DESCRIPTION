@@ -1,5 +1,5 @@
 Package: rrandvec
-Title: Generate random vectors whose components sum up to one
+Title: Generate Random Vectors Whose Components Sum Up to One
 Description: A single method implementing multiple approaches to generate pseudo-random vectors whose components sum up to one. The components of such vectors can for example be used for weighting objectives when reducing multi-objective optimisation problems to a single-objective problem in the socalled weighted sum scalarisation approach.
 Version: 1.0.0
 Authors@R: c(
