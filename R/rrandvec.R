@@ -33,15 +33,12 @@
 #'   Default is \code{FALSE}.
 #' @return [\code{matrix(n, d)}] \eqn{(n \times d)} matrix even if \eqn{n=1}.
 #' @examples
-#' R = rrandvec(10, 2)
-#' R = rrandvec(10, 5, method ="iterative")
-#' R = rrandvec(10, 3, method = "trigonometric", shuffle = TRUE, as.df = TRUE)
-#' \dontrun{
-#' opar = par(mfrow = c(1, 3))
-#' plot.ecdf(R$X1)
-#' plot.ecdf(R$X2)
-#' plot.ecdf(R$X3)
-#' par(opar)
+#' R = rrandvec(1000, 2)
+#' R = rrandvec(1000, 5, method ="iterative")
+#' R = rrandvec(1000, 3, method = "trigonometric", shuffle = TRUE, as.df = TRUE)
+#'
+#' if (require("scatterplot3d")) {
+#'   scatterplot3d::scatterplot3d(R, angle = 120, cex.symbols = 0.5, pch = 3, color = "blue")
 #' }
 #' @export
 rrandvec = function(n, d, method = "normalization", shuffle = FALSE, as.df = FALSE) {
